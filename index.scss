@@ -1,6 +1,17 @@
-#calculator {
+body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+
+  .calc {
+    display: grid;
+    grid-template-columns: 10vw, 20vw, 20vw, 20vw, 20vw, 10vw;
+    grid-template-rows: 35vh, 10vh, 10vh, 10vh, 10vh, 10vh, 5vh;
+    grid-template-areas:
+      "n, a, a, a, a, n"
+      "n, b, b, b, b, n"
+      "n, c, c, c, c, n"
+      "n, d, d, d, d, n"
+      "n, e, e, e, e, n"
+      "n, f, f, f, f, n"
+      "n, g, g, g, g, n";
+  }
 }
