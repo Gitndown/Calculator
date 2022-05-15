@@ -4,42 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Calculator Project</title>
     <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="calc">
-      <div id="calc__screen"><div>DISPLAY HERE</div></div>
-      <div class="calc calc__row--first">
-        <button id="opClear">clear</button>
+    <div id="calculatorBody"> 
+       <div id="output"></div>    
+        <div>  <input id="CE" type="button" onclick="clearAll()" value="CE"/> 
+        </div>
+        <div class="row">
+                   
+                   
       </div>
-      <div class="calc calc__row--first">
-        <button id="opPercent">\*</button>
+        <div class="row">
+            <input type="button" onclick="number('7')" value="7"/>
+            <input type="button" onclick="number('8')" value="8"/>
+            <input type="button"  onclick="number('9')" value="9"/>
+            <input type="button" onclick="operate('÷')" value="÷"/>
       </div>
-      <div class="calc calc__row--first"><button id="opPlay">PLAY</button></div>
-      <div class="calc calc__row--first"><button id="opDivide">/</button></div>
-
-      <div class="calc calc__row--second"><button id="num4">4</button></div>
-      <div class="calc calc__row--second"><button id="num5">5</button></div>
-      <div class="calc calc__row--second"><button id="num6">6</button></div>
-      <div class="calc calc__row--second"><button id="opMinus">-</button></div>
-
-      <div class="calc calc__row--third"><button id="num7">7</button></div>
-      <div class="calc calc__row--third"><button id="num8">8</button></div>
-      <div class="calc calc__row--third"><button id="num9">9</button></div>
-      <div class="calc calc__row--third">
-        <button id="opMultiply">X</button>
+        <div class="row">
+            <input type="button"  onclick="number('4')" value="4"/>
+            <input type="button" onclick="number('5')" value="5"/>
+            <input type="button"  onclick="number('6')" value="6"/>
+          <input type="button" onclick="operate('-')" value="-"/>
       </div>
+        <div class="row">
+            <input type="button"  onclick="number('1')" value="1"/>
+            <input type="button"  onclick="number('2')" value="2"/>
+            <input type="button"  onclick="number('3')" value="3"/>
+            <input type="button" onclick="operate('x')" value="x"/>
+      </div>
+        <div class="row">
+           <input type="button"  onclick="number('0')" value="0"/>
+           <input type="button" onclick="number('.')" value="."/>
+           <input id="equals" type="button"  onclick="calculateStack(stack)" value="="/> 
+           <!-- the onlick will use functions created in our JS file-->
 
-      <div class="calc calc__row--fourth"><button id="num1">1</button></div>
-      <div class="calc calc__row--fourth"><button id="num2">2</button></div>
-      <div class="calc calc__row--fourth"><button id="num3">3</button></div>
-
-      <div class="calc calc__row--fifth"><button id="num0">0</button></div>
-      <div class="calc calc__row--fifth"><button id="opDecimal">.</button></div>
-      <div class="calc calc__row--fifth"><button id="opEqual">=</button></div>
-      <div class="calc calc__row--fifth"><button id="opPlus">+</button></div>
-    </div>
+           <input type="button" onclick="operate('+')" value="+"/>
+           
+                
+      
+      </div>
+      </div>
+      
   </body>
-  <script src="js/index.js"></script>
+  <script src="index.js"></script>
 </html>
