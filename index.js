@@ -2,16 +2,19 @@
 let stack = []; //start stack off as an empty array
 let input = 0; //start index from zero
 
-function calculateStack(value) //this function will calculate the input stack when clicking the equals button
- {
-  if (input !== 0) //conditional- if input is not 0
-   { 
-    input = parseFloat(input); //turn the string into a float number
+//this function will calculate the input stack when clicking the equals button
 
-    addToStack(input);//function from line 59, add the number to the stack
-  }
+  const calculateStack = value => 
+  {
+    if (input !== 0) //conditional- if input is not 0
+     { 
+      input = parseFloat(input); //turn the string into a float number
+  
+      addToStack(input);//function from line 59, add the number to the stack
+    }
 
-// OPERATORS
+//////////////////////////////////////////////////////////////////
+
   let output = value[0]; //declare output as the value of value
   let dividedByZero = 0; 
 
@@ -59,24 +62,14 @@ function calculateStack(value) //this function will calculate the input stack wh
   }
 }
 
+const addToStack = input => stack.push(input);
 
-function addToStack(input) //this function adds the new input to the stack-used at the top
-{
-  stack.push(input);
-}
+// ----------------------------------
+const clearAll = (stack = [], input = 0) => (document.getElementById("output").innerHTML = "0");
 
 // ----------------------------------
 
-function clearAll() //created a function to set innerHTML of output to "0" when clicked. see HTML line 19.
- {
-  stack = [];
-  input = 0;
-  document.getElementById("output").innerHTML = "0";
-}
-
-// ----------------------------------
-
-function number(button) //Created a function for any input assigned "number" onclick. Connected to each numer input. 
+const number = button => //Created a function for any input assigned "number" onclick. Connected to each numer input. 
 { 
   if (    
     document.getElementById("output").innerHTML === "ERROR" ||
@@ -101,9 +94,7 @@ function number(button) //Created a function for any input assigned "number" onc
 
 // -------------------------------
 
-// function that takes in the input the user selects
-// this will determine the output on the display
-function operate(button) //this is manipulating our operator buttons
+const operate = button =>
 {
   if (input !== 0 && input !== "-") {
     input = parseFloat(input);  // this will turn the string 
@@ -125,6 +116,5 @@ function operate(button) //this is manipulating our operator buttons
 
     document.getElementById("output").innerHTML = "-";
   }
-}                        // change innerHTML of output 
-                         // to display minus
+}
                          
