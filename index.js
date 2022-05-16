@@ -50,7 +50,9 @@ function calculateStack(value) //this function will calculate the input stack wh
   {
     clearAll();
     document.getElementById("output").innerHTML = "ERROR";
-  } else {
+  } 
+  else 
+  {
     document.getElementById("output").innerHTML = output;
     input = output;
     stack = [];
@@ -101,7 +103,7 @@ function number(button) //Created a function for any input assigned "number" onc
 
 // function that takes in the input the user selects
 // this will determine the output on the display
-// function operate(button) this is manipulating our operator buttons
+function operate(button) //this is manipulating our operator buttons
 {
   if (input !== 0 && input !== "-") {
     input = parseFloat(input);  // this will turn the string 
